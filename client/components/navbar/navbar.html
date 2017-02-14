@@ -1,0 +1,71 @@
+<nav class="navbar navbar-default navbar-fixed-top" ng-controller="NavbarController">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" ng-click="nav.isCollapsed = !nav.isCollapsed">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" ui-sref="#"><img src="/assets/images/phila.png" style="max-width:200px;  width: 90%; margin-top: -1px;"></a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li ng-class="{active: isActive(item.link)}"><a ui-sref="main">Home</a></li>
+      <li if-not-user ng-class="{active: isActive('about')}"><a ui-sref="aboutUs">About Me</a></li>
+      <li if-not-user ng-class="{active: isActive('contactUs')}"><a ui-sref="contact">Contact Me</a></li>
+      <li if-not-user ng-class="{active: isActive('profile')}"><a ui-sref="profile">Profile</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li if-not-user ng-class="{active: isActive('register')}"><a ui-sref="register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li if-not-user ng-class="{active: isActive('login')}"><a ui-sref="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <!--<li class="dropdown">-->
+        <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>-->
+        <!--<ul id="login-dp" class="dropdown-menu">-->
+          <!--<li>-->
+            <!--<div class="row">-->
+              <!--<div class="col-md-12">-->
+                <!--Login via-->
+                <!--<div class="social-buttons">-->
+                  <!--<a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>-->
+                  <!--<a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>-->
+                <!--</div>-->
+                <!--or-->
+                <!--<form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">-->
+                  <!--<div class="form-group">-->
+                    <!--<label class="sr-only" for="exampleInputEmail2">Email address</label>-->
+                    <!--<input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>-->
+                  <!--</div>-->
+                  <!--<div class="form-group">-->
+                    <!--<label class="sr-only" for="exampleInputPassword2">Password</label>-->
+                    <!--<input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>-->
+                    <!--<div class="help-block text-right"><a href="">Forget the password ?</a></div>-->
+                  <!--</div>-->
+                  <!--<div class="form-group">-->
+                    <!--<button type="submit" class="btn btn-primary btn-block">Sign in</button>-->
+                  <!--</div>-->
+                  <!--<div class="checkbox">-->
+                    <!--<label>-->
+                      <!--<input type="checkbox"> keep me logged-in-->
+                    <!--</label>-->
+                  <!--</div>-->
+                <!--</form>-->
+              <!--</div>-->
+              <!--<div class="bottom text-center">-->
+                <!--New here ? <a href="#"><b>Join Us</b></a>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</li>-->
+        <!--</ul>-->
+      <!--</li>-->
+    </ul>
+  </div>
+</nav>
+<nav role="navigation" class="navbar navbar-fixed">
+  <div class="bs-header" id="content">
+    <div class="container">
+      <h1>PHILA PAUL TSHAKA BLOG</h1>
+    </div>
+  </div>
+</nav>
+
+
